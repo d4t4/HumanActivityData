@@ -42,4 +42,4 @@ The actual data archive used for this project was downloaded from the Coursera c
 
 ## Output files produced by this project
 
-A tab-delimited text file, named "tidy_dataset.txt" will be created in the working directory.
+A tab-delimited text file named "tidy_dataset.txt" will be created in the working directory.
