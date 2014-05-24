@@ -36,12 +36,12 @@ XMergeSub <- XMerge[,grep("-(mean|std)\\(\\)",features$fname)]
 
 ## Name activities in column and label dataset
 
-yMerge[,"aname"] <- activities[yMerge[,"aid"],"aname"]
+yMerge[,"activityName"] <- activities[yMerge[,"aid"],"aname"]
 
-labeledDataset <- cbind(XMergeSub,yMerge$aname,subjectMerge$subject)
+labeledDataset <- cbind(XMergeSub,yMerge$activityName,subjectMerge$subject)
 
 ## Create second, independent tidy data set with the average of each variable 
 ## for each activity and each subject; output as text file
 
-tidyDataset <- aggregate(XMergeSub,list(subject=subjectMerge$subject, activity=yMerge$aname), mean)
+tidyDataset <- aggregate(XMergeSub,list(subject=subjectMerge$subject, activity=yMerge$activityName), mean)
 write.table(tidyDataset, "tidy_dataset.txt", sep="\t", row.names = FALSE)
