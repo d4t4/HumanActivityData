@@ -30,7 +30,7 @@
 
 ## Extracted data
 
-`XMergeSub` is a subset of `XMerge`, and contains the features containing means or 
+`XMergeSub` is a subset of `XMerge`, and holds the features containing means or 
 standard deviations. Since the dataset contains a mix of means and standard deviations calculated directly from the data, and frequency means, etc., which are caluclated indirectly, it is left to the analyst to determine which is most appropriate (Option A or Option B in the script). Grep is used for string matching on the following rules:
 
 *  Option A: string matches "-mean()" and "-std()" (does not include indirect measurements, and is the default)
